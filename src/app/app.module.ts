@@ -8,7 +8,6 @@ import { HelloComponent } from './hello.component';
 import { HomeComponent } from './home/home.component';
 import { DisciplinasComponent } from './disciplinas/disciplinas.component';
 import { DisciplinasDetailsComponent } from './disciplinas-details/disciplinas-details.component';
-import { SemestresComponent } from './semestres/semestres.component';
 
 @NgModule({
   imports:      [ 
@@ -16,12 +15,11 @@ import { SemestresComponent } from './semestres/semestres.component';
     FormsModule,
     RouterModule.forRoot([
       {path: '', component: HomeComponent},      
-      {path: 'semestres', component: SemestresComponent},      
-      {path: 'semestres/:semestre', component: DisciplinasComponent},
-      {path: 'semestres/:semestre/:disciplina', component: DisciplinasDetailsComponent}
+      {path: 'disciplinas', component: DisciplinasComponent},      
+      {path: 'disciplinas/:index', component: DisciplinasDetailsComponent}
     ])
   ],
-  declarations: [ AppComponent, HelloComponent, HomeComponent, DisciplinasComponent, DisciplinasDetailsComponent, SemestresComponent ],
+  declarations: [ AppComponent, HelloComponent, HomeComponent, DisciplinasComponent, DisciplinasDetailsComponent ],
   bootstrap:    [ AppComponent ]
 })
 export class AppModule { }

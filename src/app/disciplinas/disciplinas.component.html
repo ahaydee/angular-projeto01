@@ -4,6 +4,6 @@ Semestre:
   <option *ngFor="let item of list; index as i">{{item.semestre}}</option>
 </select>
 <hr/>
-<div *ngFor="let disc of getDisciplinas();">
-  <a [routerLink]="['/disciplinas', disc.id]">{{disc.nome}}</a>
+<div *ngFor="let disc of getDisciplinas(); index as i">
+  <a [routerLink]="['/disciplinas', semestre, i]">{{disc.nome}}</a>
 </div>

@@ -16,7 +16,7 @@ import { DisciplinasDetailsComponent } from './disciplinas-details/disciplinas-d
     RouterModule.forRoot([
       {path: '', component: HomeComponent},      
       {path: 'disciplinas', component: DisciplinasComponent},      
-      {path: 'disciplinas/:index', component: DisciplinasDetailsComponent}
+      {path: 'disciplinas/:semestre/:index', component: DisciplinasDetailsComponent}
     ])
   ],
   declarations: [ AppComponent, HelloComponent, HomeComponent, DisciplinasComponent, DisciplinasDetailsComponent ],

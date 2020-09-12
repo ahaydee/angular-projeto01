@@ -9,7 +9,6 @@ export class DisciplinasDetailsComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
 }

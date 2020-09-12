@@ -1,3 +1,5 @@
-# angular-ivy-qfaxb4
+# Projeto 01 - Angular
 
-[Edit on StackBlitz ⚡️](https://stackblitz.com/edit/angular-ivy-qfaxb4)
+Projeto 01 de Angular da matéria Tópicos Especiais em Sistemas para Internet II.
+
+Feito por Anna Haydee e Danubia Cunha

@@ -1,1 +1,18 @@
 <h2>Média Geral</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Nome</th>
+      <th>Quantidade</th>
+      <th>Média Geral</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let nota of notas">
+      <td>{{nota.nome}}</td>
+      <td>{{nota.qtde}}</td>
+      <td>{{nota.media}}</td>
+    </tr>
+  </tbody>
+</table>

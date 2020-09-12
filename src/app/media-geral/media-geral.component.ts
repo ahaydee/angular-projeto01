@@ -12,36 +12,33 @@ export class MediaGeralComponent implements OnInit {
 
   getNotas(nome: string) {
     let qtde = 0;
-    let notas: number[] = [];
+    let notas = 0;
     this.list.forEach(semestre => {
       semestre.disciplinas.forEach(disciplinas => {
         disciplinas.notas.forEach(nota =>{
           if (nota.situacao != "A Cursar") {
             if (nota.nome == nome) {
               qtde++;
-              notas.push(nota.nota);
+              notas+=nota.nota;
             }
           }
         });
       });
     });
     return {
+      nome: nome,
       qtde: qtde,
-      notas: notas
+      media: this.getMedia(qtde, notas)
     }
   }
 
-  getMediaAnna() {
-    return this.notas["anna"].notas / this.notas["anna"].qtde;
-  }
-
-  getMediaDanubia() {
-    return this.notas["danubia"].notas / this.notas["danubia"].qtde;
+  getMedia(qtde: number, notas: number) {
+    return notas / qtde;
   }
 
   constructor() { 
-    this.notas["anna"] = this.getNotas("anna");
-    this.notas["danubia"] = this.getNotas("danubia");
+    this.notas.push(this.getNotas("Anna"));
+    this.notas.push(this.getNotas("Danubia"));
   }
 
   ngOnInit() {

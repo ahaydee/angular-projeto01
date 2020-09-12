@@ -18,7 +18,7 @@ import { MediaGeralComponent } from './media-geral/media-geral.component';
       {path: '', component: HomeComponent},
       {path: 'disciplinas', component: DisciplinasComponent},
       {path: 'disciplinas/:semestre/:index', component: DisciplinasDetailsComponent},
-      {path: 'media-geral', component: MediaGeralComponent},
+      {path: 'mediageral', component: MediaGeralComponent},
     ])
   ],
   declarations: [ AppComponent, HelloComponent, HomeComponent, DisciplinasComponent, DisciplinasDetailsComponent, MediaGeralComponent ],

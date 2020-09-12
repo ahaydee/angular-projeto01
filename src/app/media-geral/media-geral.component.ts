@@ -8,7 +8,7 @@ import { semestres } from '../consts';
 })
 export class MediaGeralComponent implements OnInit {
   list = semestres;
-  notas;
+  notas = [];
 
   getNotas(nome: string) {
     let qtde = 0;

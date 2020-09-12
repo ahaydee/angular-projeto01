@@ -1,14 +1,24 @@
 import { Component, OnInit } from '@angular/core';
 
+import { semestres } from '../consts';
+import { ActivatedRoute } from '@angular/router';
+
 @Component({
   selector: 'app-disciplinas-details',
   templateUrl: './disciplinas-details.component.html',
   styleUrls: ['./disciplinas-details.component.css']
 })
 export class DisciplinasDetailsComponent implements OnInit {
+  disciplina;
 
-  constructor() { }
+  constructor(private route: ActivatedRoute) { }
 
-  ngOnInit() {}
+  ngOnInit() {
+    this.route.paramMap.subscribe(params => {
+      let index = params.get('index');
+      let semestre = params.get('semestre');
+      this.disciplina = semestres[semestre].disciplinas[index];
+    });
+  }
 
 }

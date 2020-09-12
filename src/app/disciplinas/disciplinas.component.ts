@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 
-import {semestres} from '../consts.ts';
+import {semestres} from '../consts';
 
 @Component({
   selector: 'app-disciplinas',
@@ -9,8 +9,15 @@ import {semestres} from '../consts.ts';
 })
 export class DisciplinasComponent implements OnInit {
   list = semestres;
+  semestre;
 
-  constructor() { }
+  getDisciplinas(){
+    return this.list[this.semestre-1].disciplinas;
+  }
+
+  constructor() { 
+    this.semestre = 1;
+  }
 
   ngOnInit() {
   }

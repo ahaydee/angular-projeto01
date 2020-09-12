@@ -1,5 +1,9 @@
 <h2>Disciplinas</h2>
-
-<select *ngFor="let item in lists; index as i">
-  <option>{{item.semestre}}</option>
+Semestre:
+<select class="form-control"  [(ngModel)]="semestre">
+  <option *ngFor="let item of list; index as i">{{item.semestre}}</option>
 </select>
+<hr/>
+<div *ngFor="let disc of getDisciplinas();">
+  <a [routerLink]="['/disciplinas', disc.id]">{{disc.nome}}</a>
+</div>

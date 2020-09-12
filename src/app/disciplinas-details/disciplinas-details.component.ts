@@ -16,7 +16,7 @@ export class DisciplinasDetailsComponent implements OnInit {
   ngOnInit() {
     this.route.paramMap.subscribe(params => {
       let index = params.get('index');
-      let semestre = params.get('semestre');
+      let semestre = parseInt(params.get('semestre'))-1;
       this.disciplina = semestres[semestre].disciplinas[index];
     });
   }

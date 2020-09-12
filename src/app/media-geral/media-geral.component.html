@@ -12,7 +12,7 @@
     <tr *ngFor="let nota of notas">
       <td>{{nota.nome}}</td>
       <td>{{nota.qtde}}</td>
-      <td>{{nota.media}}</td>
+      <td>{{nota.media | number}}</td>
     </tr>
   </tbody>
 </table>

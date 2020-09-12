@@ -16,11 +16,9 @@ export class MediaGeralComponent implements OnInit {
     this.list.forEach(semestre => {
       semestre.disciplinas.forEach(disciplinas => {
         disciplinas.notas.forEach(nota =>{
-          if (nota.situacao != "A Cursar") {
-            if (nota.nome == nome) {
-              qtde++;
-              notas+=nota.nota;
-            }
+          if (nota.situacao != "A Cursar" && nota.nome == nome) {
+            qtde++;
+            notas+=nota.nota;
           }
         });
       });
